@@ -2,96 +2,137 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>1968 Mercedes 250 SL California</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" />
   <style>
+    * { box-sizing: border-box; }
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f7f7f7;
     }
+
     .container {
       display: flex;
-      height: 100vh;
+      flex-direction: row;
+      min-height: 100vh;
     }
+
     .sidebar {
-      width: 200px;
-      background-color: #222;
+      background-color: #1e1e1e;
       color: white;
+      width: 220px;
       padding: 20px;
     }
-    .sidebar a {
-      color: white;
-      text-decoration: none;
-      display: block;
-      margin-bottom: 10px;
-    }
-    .main {
-      flex-grow: 1;
-      padding: 40px;
-      overflow-y: auto;
-      background-color: white;
-    }
-    h1 {
+
+    .sidebar h2 {
+      font-size: 20px;
       margin-top: 0;
     }
+
+    .sidebar a {
+      color: #00d8ff;
+      text-decoration: none;
+      display: block;
+      margin: 10px 0;
+    }
+
+    .main {
+      flex: 1;
+      padding: 40px;
+      background-color: white;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-top: 0;
+    }
+
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 10px;
-      margin-top: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 30px;
     }
-    .gallery img {
+
+    .gallery a img {
       width: 100%;
       height: auto;
-      border-radius: 5px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .gallery a img:hover {
+      transform: scale(1.03);
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        text-align: center;
+      }
+
+      .main {
+        padding: 20px;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="sidebar">
-      <h2>Menu</h2>
-      <a href="history.pdf" target="_blank">History PDF</a>
-    </div>
-    <div class="main">
-      <h1>1968 Mercedes-Benz 250 SL California Hard Top</h1>
-      <p>
-        A rare and desirable 5-speed California model in factory original Silver Metallic (DB-180)
-        over Bordeaux leather. Matching-numbers engine. Includes full datacard, extensive service
-        records, and inspection reports. Removable hard top only, no soft top. Originally purchased
-        in France, with one long-term owner (since 1995).
-      </p>
-      <div class="gallery">
-        <img src="1.webp" alt="Image 1" />
-        <img src="2.webp" alt="Image 2" />
-        <img src="3.webp" alt="Image 3" />
-        <img src="4.webp" alt="Image 4" />
-        <img src="5.webp" alt="Image 5" />
-        <img src="6.webp" alt="Image 6" />
-        <img src="7.webp" alt="Image 7" />
-        <img src="9.webp" alt="Image 9" />
-        <img src="10.webp" alt="Image 10" />
-        <img src="11.webp" alt="Image 11" />
-        <img src="13.webp" alt="Image 13" />
-        <img src="14.webp" alt="Image 14" />
-        <img src="15.webp" alt="Image 15" />
-        <img src="16.webp" alt="Image 16" />
-        <img src="17.webp" alt="Image 17" />
-        <img src="20.webp" alt="Image 20" />
-        <img src="23.webp" alt="Image 23" />
-        <img src="24.webp" alt="Image 24" />
-        <img src="25.webp" alt="Image 25" />
-        <img src="28.webp" alt="Image 28" />
-        <img src="30.webp" alt="Image 30" />
-        <img src="31.webp" alt="Image 31" />
-        <img src="36.webp" alt="Image 36" />
-        <img src="37.webp" alt="Image 37" />
-        <img src="38.webp" alt="Image 38" />
-        <img src="40.webp" alt="Image 40" />
-        <img src="41.webp" alt="Image 41" />
-      </div>
+
+<div class="container">
+  <div class="sidebar">
+    <h2>Menu</h2>
+    <a href="history.pdf" target="_blank">History PDF</a>
+  </div>
+
+  <div class="main">
+    <h1>1968 Mercedes-Benz 250 SL California Hard Top</h1>
+    <p>
+      A rare and desirable 5-speed California model in factory original Silver Metallic (DB-180)
+      over Bordeaux leather. Matching-numbers engine. Includes full datacard, extensive service
+      records, and inspection reports. Removable hard top only, no soft top. Originally purchased
+      in France, with one long-term owner (since 1995).
+    </p>
+
+    <div class="gallery">
+      <a href="1.webp" data-lightbox="gallery"><img src="1.webp" alt="Image 1"></a>
+      <a href="2.webp" data-lightbox="gallery"><img src="2.webp" alt="Image 2"></a>
+      <a href="3.webp" data-lightbox="gallery"><img src="3.webp" alt="Image 3"></a>
+      <a href="4.webp" data-lightbox="gallery"><img src="4.webp" alt="Image 4"></a>
+      <a href="5.webp" data-lightbox="gallery"><img src="5.webp" alt="Image 5"></a>
+      <a href="6.webp" data-lightbox="gallery"><img src="6.webp" alt="Image 6"></a>
+      <a href="7.webp" data-lightbox="gallery"><img src="7.webp" alt="Image 7"></a>
+      <a href="9.webp" data-lightbox="gallery"><img src="9.webp" alt="Image 9"></a>
+      <a href="10.webp" data-lightbox="gallery"><img src="10.webp" alt="Image 10"></a>
+      <a href="11.webp" data-lightbox="gallery"><img src="11.webp" alt="Image 11"></a>
+      <a href="13.webp" data-lightbox="gallery"><img src="13.webp" alt="Image 13"></a>
+      <a href="14.webp" data-lightbox="gallery"><img src="14.webp" alt="Image 14"></a>
+      <a href="15.webp" data-lightbox="gallery"><img src="15.webp" alt="Image 15"></a>
+      <a href="16.webp" data-lightbox="gallery"><img src="16.webp" alt="Image 16"></a>
+      <a href="17.webp" data-lightbox="gallery"><img src="17.webp" alt="Image 17"></a>
+      <a href="20.webp" data-lightbox="gallery"><img src="20.webp" alt="Image 20"></a>
+      <a href="23.webp" data-lightbox="gallery"><img src="23.webp" alt="Image 23"></a>
+      <a href="24.webp" data-lightbox="gallery"><img src="24.webp" alt="Image 24"></a>
+      <a href="25.webp" data-lightbox="gallery"><img src="25.webp" alt="Image 25"></a>
+      <a href="28.webp" data-lightbox="gallery"><img src="28.webp" alt="Image 28"></a>
+      <a href="30.webp" data-lightbox="gallery"><img src="30.webp" alt="Image 30"></a>
+      <a href="31.webp" data-lightbox="gallery"><img src="31.webp" alt="Image 31"></a>
+      <a href="36.webp" data-lightbox="gallery"><img src="36.webp" alt="Image 36"></a>
+      <a href="37.webp" data-lightbox="gallery"><img src="37.webp" alt="Image 37"></a>
+      <a href="38.webp" data-lightbox="gallery"><img src="38.webp" alt="Image 38"></a>
+      <a href="40.webp" data-lightbox="gallery"><img src="40.webp" alt="Image 40"></a>
+      <a href="41.webp" data-lightbox="gallery"><img src="41.webp" alt="Image 41"></a>
     </div>
   </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox-plus-jquery.min.js"></script>
 </body>
 </html>
